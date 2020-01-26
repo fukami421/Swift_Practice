@@ -14,49 +14,58 @@ import RxDataSources
 class TableViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
+    private let viewModel: TableViewModel = TableViewModel()
     private let disposeBag = DisposeBag()
-
-    let sections = [
-        SectionOfCustomData(header: "First section", items: [CustomData(anInt: 0, aString: "zero", aCGPoint: CGPoint.zero), CustomData(anInt: 1, aString: "one", aCGPoint: CGPoint(x: 1, y: 1)) ]),
-        SectionOfCustomData(header: "Second section", items: [CustomData(anInt: 2, aString: "two", aCGPoint: CGPoint(x: 2, y: 2)), CustomData(anInt: 3, aString: "three", aCGPoint: CGPoint(x: 3, y: 3)) ])
-    ]
     
-    private lazy var dataSource = RxTableViewSectionedReloadDataSource<SectionOfCustomData>(configureCell: configureCell, titleForHeaderInSection: titleForHeaderInSection, canEditRowAtIndexPath: canEditRowAtIndexPath)
-
-    private lazy var configureCell: RxTableViewSectionedReloadDataSource<SectionOfCustomData>.ConfigureCell = { [weak self] (dataSource, tableView, indexPath, item) in
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "myCell")
+    var dataSource: RxTableViewSectionedAnimatedDataSource<SectionOfCustomData>!
+    
+    private lazy var configureCell: RxTableViewSectionedAnimatedDataSource<SectionOfCustomData>.ConfigureCell = { [weak self] (dataSource, tableView, indexPath, item) in
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "")
         cell.textLabel?.text = item.aString
         return cell
     }
 
-    private lazy var titleForHeaderInSection: RxTableViewSectionedReloadDataSource<SectionOfCustomData>.TitleForHeaderInSection = { [weak self] (dataSource, indexPath) in
+    private lazy var titleForHeaderInSection: RxTableViewSectionedAnimatedDataSource<SectionOfCustomData>.TitleForHeaderInSection = { [weak self] (dataSource, indexPath) in
         return dataSource.sectionModels[indexPath].header
     }
     
     private lazy var canEditRowAtIndexPath:
-        RxTableViewSectionedReloadDataSource<SectionOfCustomData>.CanEditRowAtIndexPath = { [weak self] (dataSource, indexPath) in
+    RxTableViewSectionedAnimatedDataSource<SectionOfCustomData>.CanEditRowAtIndexPath = { [weak self] (dataSource, indexPath) in
         return true
     }
     
+    private lazy var canMoveRowAtIndexPath: RxTableViewSectionedAnimatedDataSource<SectionOfCustomData>.CanMoveRowAtIndexPath = { [weak self] (dataSource, indexPath) in
+           return true
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Table"
-        
-        self.bind()
+        self.setupDataSource()
+        self.bindViewModel()
+        self.tableView.isEditing = true
     }
-    
-    func bind()
+
+    private func setupDataSource() {
+        self.dataSource = RxTableViewSectionedAnimatedDataSource<SectionOfCustomData>(
+            animationConfiguration: AnimationConfiguration(insertAnimation: .right,
+                                                           reloadAnimation: .none,
+                                                           deleteAnimation: .fade),
+            configureCell: configureCell,
+            canEditRowAtIndexPath: canEditRowAtIndexPath,
+            canMoveRowAtIndexPath: canMoveRowAtIndexPath
+        )
+    }
+
+    func bindViewModel()
     {
-        Observable.just(self.sections)
-            .bind(to: self.tableView.rx.items(dataSource: dataSource))
+        self.viewModel.outputs.dataSource
+            .bind(to: tableView.rx.items(dataSource: self.dataSource))
             .disposed(by: disposeBag)
         
         self.tableView.rx
             .itemDeleted
-            .subscribe({
-              print("\($0)")
-            })
+            .bind(to: self.viewModel.inputs.itemDeleted)
             .disposed(by: disposeBag)
     }
 }

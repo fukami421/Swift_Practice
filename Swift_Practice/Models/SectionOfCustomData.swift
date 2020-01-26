@@ -17,14 +17,44 @@ struct CustomData {
 
 struct SectionOfCustomData {
   var header: String
-  var items: [Item]
+  var numbers: [Item]
 }
 
-extension SectionOfCustomData: SectionModelType {
-  typealias Item = CustomData
+extension CustomData
+    : IdentifiableType
+    , Equatable {
+    typealias Identity = Int
 
-   init(original: SectionOfCustomData, items: [Item]) {
-    self = original
-    self.items = items
-  }
+    var identity: Int {
+        return anInt
+    }
 }
+
+extension SectionOfCustomData: AnimatableSectionModelType
+{
+    typealias Item = CustomData
+    typealias Identity = String
+
+    var identity: String {
+        return header
+    }
+
+    var items: [CustomData] {
+        return numbers
+    }
+
+    init(original: SectionOfCustomData, items: [Item]) {
+        self = original
+        self.numbers = items
+    }
+    
+}
+
+//extension SectionOfCustomData: SectionModelType {
+//  typealias Item = CustomData
+//
+//   init(original: SectionOfCustomData, items: [Item]) {
+//    self = original
+//    self.items = items
+//  }
+//}

@@ -19,6 +19,7 @@
 		3864513123D9C07100E75BAD /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3864512F23D9C07100E75BAD /* ExampleViewController.swift */; };
 		3864513223D9C07100E75BAD /* ExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3864513023D9C07100E75BAD /* ExampleViewController.xib */; };
 		3864513523D9F67100E75BAD /* SectionOfCustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3864513423D9F67100E75BAD /* SectionOfCustomData.swift */; };
+		3864513823DD665100E75BAD /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3864513723DD665100E75BAD /* TableViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3864512F23D9C07100E75BAD /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		3864513023D9C07100E75BAD /* ExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleViewController.xib; sourceTree = "<group>"; };
 		3864513423D9F67100E75BAD /* SectionOfCustomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionOfCustomData.swift; sourceTree = "<group>"; };
+		3864513723DD665100E75BAD /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		39B73437C78F1B06A136173E /* Pods-Swift_Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Practice.release.xcconfig"; path = "Target Support Files/Pods-Swift_Practice/Pods-Swift_Practice.release.xcconfig"; sourceTree = "<group>"; };
 		7298E96A511DB18B524C570F /* Pods_Swift_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				3864513323D9F64A00E75BAD /* Models */,
+				3864513623DD649600E75BAD /* ViewModels */,
 				3864512A23D9B4BA00E75BAD /* Views */,
 				3864511623D9B42600E75BAD /* AppDelegate.swift */,
 				3864511823D9B42600E75BAD /* SceneDelegate.swift */,
@@ -111,6 +114,14 @@
 				3864513423D9F67100E75BAD /* SectionOfCustomData.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3864513623DD649600E75BAD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3864513723DD665100E75BAD /* TableViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		7103E94CE3E8F2269724E5F4 /* Pods */ = {
@@ -248,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3864511723D9B42600E75BAD /* AppDelegate.swift in Sources */,
+				3864513823DD665100E75BAD /* TableViewModel.swift in Sources */,
 				3864511923D9B42600E75BAD /* SceneDelegate.swift in Sources */,
 				3864511B23D9B42600E75BAD /* ContentView.swift in Sources */,
 				3864513523D9F67100E75BAD /* SectionOfCustomData.swift in Sources */,
