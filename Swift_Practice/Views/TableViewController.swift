@@ -30,11 +30,11 @@ class TableViewController: UIViewController {
     }
     
     private lazy var canEditRowAtIndexPath:
-    RxTableViewSectionedAnimatedDataSource<SectionOfCustomData>.CanEditRowAtIndexPath = { [weak self] (dataSource, indexPath) in
+    RxTableViewSectionedAnimatedDataSource<SectionOfCustomData>.CanEditRowAtIndexPath = { _, _ in
         return true
     }
     
-    private lazy var canMoveRowAtIndexPath: RxTableViewSectionedAnimatedDataSource<SectionOfCustomData>.CanMoveRowAtIndexPath = { [weak self] (dataSource, indexPath) in
+    private lazy var canMoveRowAtIndexPath: RxTableViewSectionedAnimatedDataSource<SectionOfCustomData>.CanMoveRowAtIndexPath = { _, _ in
            return true
     }
 
