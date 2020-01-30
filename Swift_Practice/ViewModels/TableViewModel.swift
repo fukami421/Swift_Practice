@@ -11,6 +11,7 @@ import RxCocoa
 
 protocol TableViewModelInputs {
     var itemDeleted: AnyObserver<IndexPath>{ get }
+    var itemMoved: AnyObserver<(sourceIndex: IndexPath, destinationIndex: IndexPath)>{ get }
 //    var itemSelected: AnyObserver<IndexPath>{ get }
 }
 
@@ -30,12 +31,14 @@ class TableViewModel: TableViewModelType, TableViewModelInputs, TableViewModelOu
     var outputs: TableViewModelOutputs { return self }
     
     let itemDeleted: AnyObserver<IndexPath>
+    let itemMoved: AnyObserver<(sourceIndex: IndexPath, destinationIndex: IndexPath)>
 
     let dataSource: Observable<[SectionOfCustomData]>
     
     var sections = [
-        SectionOfCustomData(header: "First section", numbers: [CustomData(anInt: 0, aString: "zero", aCGPoint: CGPoint.zero), CustomData(anInt: 1, aString: "one", aCGPoint: CGPoint(x: 1, y: 1)) ]),
-        SectionOfCustomData(header: "Second section", numbers: [CustomData(anInt: 2, aString: "two", aCGPoint: CGPoint(x: 2, y: 2)), CustomData(anInt: 3, aString: "three", aCGPoint: CGPoint(x: 3, y: 3)) ])
+        SectionOfCustomData(header: "First section", numbers: [CustomData(anInt: 0, aString: "zero", aCGPoint: CGPoint.zero), CustomData(anInt: 1, aString: "one", aCGPoint: CGPoint(x: 1, y: 1)), CustomData(anInt: 2, aString: "two", aCGPoint: CGPoint(x: 2, y: 2)), CustomData(anInt: 3, aString: "three", aCGPoint: CGPoint(x: 3, y: 3)) ])
+//        ,
+//        SectionOfCustomData(header: "Second section", numbers: [CustomData(anInt: 2, aString: "two", aCGPoint: CGPoint(x: 2, y: 2)), CustomData(anInt: 3, aString: "three", aCGPoint: CGPoint(x: 3, y: 3)) ])
     ]
     private let disposeBag   = DisposeBag()
     
@@ -50,6 +53,14 @@ class TableViewModel: TableViewModelType, TableViewModelInputs, TableViewModelOu
             _itemDeleted.accept(indexPath)
         }
         
+        let _itemMoved = BehaviorRelay<(sourceIndex: IndexPath, destinationIndex: IndexPath)>(value: ([], []))
+        self.itemMoved = AnyObserver<(sourceIndex: IndexPath, destinationIndex: IndexPath)> { event in
+            guard let indexPaths = event.element else {
+                return
+            }
+            _itemMoved.accept((indexPaths))
+        }
+        
         // Ouputのpropertyの初期化
         let _dataSource = BehaviorRelay<[SectionOfCustomData]>(value: self.sections)
         self.dataSource = _dataSource.asObservable()
@@ -59,6 +70,20 @@ class TableViewModel: TableViewModelType, TableViewModelInputs, TableViewModelOu
             .filter { $0 != [] }
             .subscribe({ indexPath in
                 self.sections[indexPath.element!.section].numbers.remove(at: indexPath.element!.row)
+                _dataSource.accept(self.sections)
+            })
+            .disposed(by: self.disposeBag)
+        
+        //　移動した上での配列をdataSourcenに流す
+        _itemMoved
+            .filter { $0.0 != [] && $0.1 != []}
+            .subscribe({ indexPath in
+                let from = indexPath.element?.0
+                let to = indexPath.element?.1
+                
+                let ele = self.sections[from!.section].numbers[from!.row]
+                self.sections[from!.section].numbers.remove(at: from!.row)
+                self.sections[to!.section].numbers.insert(ele, at: to!.row)
                 _dataSource.accept(self.sections)
             })
             .disposed(by: self.disposeBag)

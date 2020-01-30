@@ -67,6 +67,11 @@ class TableViewController: UIViewController {
             .itemDeleted
             .bind(to: self.viewModel.inputs.itemDeleted)
             .disposed(by: disposeBag)
+        
+        self.tableView.rx
+            .itemMoved
+            .bind(to: self.viewModel.inputs.itemMoved)
+            .disposed(by: self.disposeBag)
     }
 }
 

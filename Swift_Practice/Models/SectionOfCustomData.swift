@@ -10,14 +10,14 @@
 import RxDataSources
 
 struct CustomData {
-  var anInt: Int
-  var aString: String
-  var aCGPoint: CGPoint
+    var anInt: Int
+    var aString: String
+    var aCGPoint: CGPoint
 }
 
 struct SectionOfCustomData {
-  var header: String
-  var numbers: [Item]
+    var header: String
+    var numbers: [Item]
 }
 
 extension CustomData
