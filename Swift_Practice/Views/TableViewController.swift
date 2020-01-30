@@ -14,6 +14,8 @@ import RxDataSources
 class TableViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    private var editBarButton: UIBarButtonItem!
+
     private let viewModel: TableViewModel = TableViewModel()
     private let disposeBag = DisposeBag()
     
@@ -42,8 +44,14 @@ class TableViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Table"
         self.setupDataSource()
+        self.setupNavigationBar()
         self.bindViewModel()
-        self.tableView.isEditing = true
+        self.tableView.isEditing = false
+    }
+
+    private func setupNavigationBar() {
+        editBarButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: nil)
+        navigationItem.rightBarButtonItems = [editBarButton]
     }
 
     private func setupDataSource() {
@@ -71,6 +79,11 @@ class TableViewController: UIViewController {
         self.tableView.rx
             .itemMoved
             .bind(to: self.viewModel.inputs.itemMoved)
+            .disposed(by: self.disposeBag)
+        
+        self.editBarButton.rx.tap.asDriver()
+            .map { [unowned self] in self.tableView.isEditing }
+            .drive(onNext: { [unowned self] result in self.tableView.setEditing(!result, animated: true) })
             .disposed(by: self.disposeBag)
     }
 }
