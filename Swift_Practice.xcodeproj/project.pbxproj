@@ -20,6 +20,8 @@
 		3864513223D9C07100E75BAD /* ExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3864513023D9C07100E75BAD /* ExampleViewController.xib */; };
 		3864513523D9F67100E75BAD /* SectionOfCustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3864513423D9F67100E75BAD /* SectionOfCustomData.swift */; };
 		3864513823DD665100E75BAD /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3864513723DD665100E75BAD /* TableViewModel.swift */; };
+		387617B123E4738D001B70A8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387617AF23E4738D001B70A8 /* DetailViewController.swift */; };
+		387617B223E4738D001B70A8 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387617B023E4738D001B70A8 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		3864513023D9C07100E75BAD /* ExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleViewController.xib; sourceTree = "<group>"; };
 		3864513423D9F67100E75BAD /* SectionOfCustomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionOfCustomData.swift; sourceTree = "<group>"; };
 		3864513723DD665100E75BAD /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		387617AF23E4738D001B70A8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		387617B023E4738D001B70A8 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		39B73437C78F1B06A136173E /* Pods-Swift_Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Practice.release.xcconfig"; path = "Target Support Files/Pods-Swift_Practice/Pods-Swift_Practice.release.xcconfig"; sourceTree = "<group>"; };
 		7298E96A511DB18B524C570F /* Pods_Swift_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,6 +108,8 @@
 				3864512C23D9B4DF00E75BAD /* TableViewController.xib */,
 				3864512F23D9C07100E75BAD /* ExampleViewController.swift */,
 				3864513023D9C07100E75BAD /* ExampleViewController.xib */,
+				387617AF23E4738D001B70A8 /* DetailViewController.swift */,
+				387617B023E4738D001B70A8 /* DetailViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3864512323D9B42800E75BAD /* LaunchScreen.storyboard in Resources */,
+				387617B223E4738D001B70A8 /* DetailViewController.xib in Resources */,
 				3864512023D9B42800E75BAD /* Preview Assets.xcassets in Resources */,
 				3864511D23D9B42800E75BAD /* Assets.xcassets in Resources */,
 				3864512E23D9B4DF00E75BAD /* TableViewController.xib in Resources */,
@@ -265,6 +272,7 @@
 				3864513523D9F67100E75BAD /* SectionOfCustomData.swift in Sources */,
 				3864512D23D9B4DF00E75BAD /* TableViewController.swift in Sources */,
 				3864513123D9C07100E75BAD /* ExampleViewController.swift in Sources */,
+				387617B123E4738D001B70A8 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

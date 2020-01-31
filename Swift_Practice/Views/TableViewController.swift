@@ -67,23 +67,38 @@ class TableViewController: UIViewController {
 
     func bindViewModel()
     {
+        // viewModelのdataSourceをtableViewにbind
         self.viewModel.outputs.dataSource
             .bind(to: tableView.rx.items(dataSource: self.dataSource))
             .disposed(by: disposeBag)
         
+        // cellのdelete
         self.tableView.rx
             .itemDeleted
             .bind(to: self.viewModel.inputs.itemDeleted)
             .disposed(by: disposeBag)
         
+        // cellのmove
         self.tableView.rx
             .itemMoved
             .bind(to: self.viewModel.inputs.itemMoved)
             .disposed(by: self.disposeBag)
         
-        self.editBarButton.rx.tap.asDriver()
-            .map { [unowned self] in self.tableView.isEditing }
-            .drive(onNext: { [unowned self] result in self.tableView.setEditing(!result, animated: true) })
+        // editBarButtonの情報をtableView.setEditingに伝える
+        self.editBarButton.rx.tap
+            .map{ [unowned self] in self.tableView.isEditing }
+            .subscribe(onNext: { [unowned self] result in
+                self.tableView.setEditing(!result, animated: true)
+            })
+            .disposed(by: self.disposeBag)
+                
+        // cellをタップしてページ遷移
+        self.tableView.rx.modelSelected(CustomData.self)
+            .subscribe({ data in
+                let vc = DetailViewController.init(nibName: nil, bundle: nil)
+                vc.title = data.element?.aString
+                self.navigationController?.pushViewController(vc, animated: true)
+            })
             .disposed(by: self.disposeBag)
     }
 }
