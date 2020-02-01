@@ -6,6 +6,7 @@
 //  Copyright © 2020 深見龍一. All rights reserved.
 //
 
+import Foundation
 import RxSwift
 import RxCocoa
 

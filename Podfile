@@ -6,5 +6,6 @@ target 'Swift_Practice' do
    pod 'RxCocoa'
    pod 'Alamofire'
    pod 'RxDataSources'
+   pod 'RealmSwift'
 end
 

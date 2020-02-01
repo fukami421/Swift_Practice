@@ -1,6 +1,8 @@
 ${PODS_ROOT}/Target Support Files/Pods-Swift_Practice/Pods-Swift_Practice-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework
+${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
+${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework
 ${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
 ${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework
 ${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
