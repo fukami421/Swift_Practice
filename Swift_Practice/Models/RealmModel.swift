@@ -11,4 +11,12 @@ import RealmSwift
 
 class RealmModel: Object {
     @objc dynamic var memo:String = ""
+    
+    init(memo: String)
+    {
+        self.memo = memo
+    }
+    
+    required init() {
+    }
 }

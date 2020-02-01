@@ -78,9 +78,12 @@ class RealmViewModel: RealmViewModelType, RealmViewModelInputs, RealmViewModelOu
                 try! self.realm.write {
                     self.realm.add(realmModel)
                 }
+                self.realmData?.append(RealmModel(memo: memo))
+                
                 // tableViewに表示用のdataを更新
                 let _data = self.realm.objects(RealmModel.self)
-                _dataSource.accept(Array(_data))
+                self.realmData = Array(_data)
+                _dataSource.accept(self.realmData!)
             })
             .disposed(by: self.disposeBag)
 
