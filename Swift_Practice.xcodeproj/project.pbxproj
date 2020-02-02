@@ -26,6 +26,10 @@
 		387617B623E51D56001B70A8 /* RealmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387617B423E51D56001B70A8 /* RealmViewController.xib */; };
 		387617B823E52780001B70A8 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387617B723E52780001B70A8 /* RealmModel.swift */; };
 		387617BA23E53838001B70A8 /* RealmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387617B923E53838001B70A8 /* RealmViewModel.swift */; };
+		38E5705023E580CC00122636 /* ApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E5704E23E580CC00122636 /* ApiViewController.swift */; };
+		38E5705123E580CC00122636 /* ApiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E5704F23E580CC00122636 /* ApiViewController.xib */; };
+		38E5705323E580E100122636 /* ApiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E5705223E580E100122636 /* ApiViewModel.swift */; };
+		38E5705523E582BA00122636 /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E5705423E582BA00122636 /* ApiModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		387617B423E51D56001B70A8 /* RealmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RealmViewController.xib; sourceTree = "<group>"; };
 		387617B723E52780001B70A8 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		387617B923E53838001B70A8 /* RealmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmViewModel.swift; sourceTree = "<group>"; };
+		38E5704E23E580CC00122636 /* ApiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiViewController.swift; sourceTree = "<group>"; };
+		38E5704F23E580CC00122636 /* ApiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApiViewController.xib; sourceTree = "<group>"; };
+		38E5705223E580E100122636 /* ApiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiViewModel.swift; sourceTree = "<group>"; };
+		38E5705423E582BA00122636 /* ApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
 		39B73437C78F1B06A136173E /* Pods-Swift_Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Practice.release.xcconfig"; path = "Target Support Files/Pods-Swift_Practice/Pods-Swift_Practice.release.xcconfig"; sourceTree = "<group>"; };
 		7298E96A511DB18B524C570F /* Pods_Swift_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,6 +128,8 @@
 				387617B023E4738D001B70A8 /* DetailViewController.xib */,
 				387617B323E51D56001B70A8 /* RealmViewController.swift */,
 				387617B423E51D56001B70A8 /* RealmViewController.xib */,
+				38E5704E23E580CC00122636 /* ApiViewController.swift */,
+				38E5704F23E580CC00122636 /* ApiViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,6 +139,7 @@
 			children = (
 				3864513423D9F67100E75BAD /* SectionOfCustomData.swift */,
 				387617B723E52780001B70A8 /* RealmModel.swift */,
+				38E5705423E582BA00122636 /* ApiModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,6 +149,7 @@
 			children = (
 				3864513723DD665100E75BAD /* TableViewModel.swift */,
 				387617B923E53838001B70A8 /* RealmViewModel.swift */,
+				38E5705223E580E100122636 /* ApiViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -226,6 +238,7 @@
 				3864512E23D9B4DF00E75BAD /* TableViewController.xib in Resources */,
 				387617B623E51D56001B70A8 /* RealmViewController.xib in Resources */,
 				3864513223D9C07100E75BAD /* ExampleViewController.xib in Resources */,
+				38E5705123E580CC00122636 /* ApiViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,8 +298,11 @@
 				387617BA23E53838001B70A8 /* RealmViewModel.swift in Sources */,
 				3864511B23D9B42600E75BAD /* ContentView.swift in Sources */,
 				3864513523D9F67100E75BAD /* SectionOfCustomData.swift in Sources */,
+				38E5705023E580CC00122636 /* ApiViewController.swift in Sources */,
+				38E5705523E582BA00122636 /* ApiModel.swift in Sources */,
 				3864512D23D9B4DF00E75BAD /* TableViewController.swift in Sources */,
 				387617B523E51D56001B70A8 /* RealmViewController.swift in Sources */,
+				38E5705323E580E100122636 /* ApiViewModel.swift in Sources */,
 				3864513123D9C07100E75BAD /* ExampleViewController.swift in Sources */,
 				387617B123E4738D001B70A8 /* DetailViewController.swift in Sources */,
 			);
