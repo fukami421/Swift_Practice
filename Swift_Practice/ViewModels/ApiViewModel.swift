@@ -55,11 +55,8 @@ class ApiViewModel: ApiViewModelType, ApiViewModelInputs, ApiViewModelOutputs
         // searchTextからAPIを叩き結果を_usersに流す
         _searchText
             .filter{ $0 != "" }
-            .bind(onNext: {_q in
-                let _array = self.createSingle(q: _q).asObservable()
-                _array.bind(to: _users)
-                    .disposed(by: self.disposeBag)
-            })
+            .flatMap{ self.createSingle(q: $0) }
+            .bind(to: _users)
             .disposed(by: self.disposeBag)
     }
     
