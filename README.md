@@ -7,12 +7,14 @@
 #### Swiftの練習リポジトリ(主に下記について)
 - RxDataSources
 - Realm
+- Call API
 
 ## Used Libraries
 [RxSwift](https://github.com/ReactiveX/RxSwift)  
 [RxCocoa](https://github.com/ReactiveX/RxSwift/tree/master/RxCocoa)  
 [RxDataSources](https://github.com/RxSwiftCommunity/RxDataSources)  
 [Realm](https://github.com/realm/realm-cocoa)  
+[Alamofire](https://github.com/Alamofire/Alamofire)  
 
 ## Setup
 #### Pod setup
