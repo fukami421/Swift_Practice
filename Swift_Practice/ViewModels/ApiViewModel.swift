@@ -34,7 +34,7 @@ class ApiViewModel: ApiViewModelType, ApiViewModelInputs, ApiViewModelOutputs
 
     let users: Observable<[ApiModel.Item]>
 
-    private let disposeBag   = DisposeBag()
+    private let disposeBag = DisposeBag()
     
     // MARK: - Initializers
     init() {

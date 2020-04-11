@@ -20,12 +20,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        let tableVC = UINavigationController(rootViewController: ApiViewController.init(nibName: nil, bundle: nil))
-
+        let tableVC = UINavigationController(rootViewController: DetailViewController.init(nibName: nil, bundle: nil))
+        let scrollVC = ScrollStackViewController.init(nibName: nil, bundle: nil)
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = tableVC
+            window.rootViewController = scrollVC
             self.window = window
             window.makeKeyAndVisible()
         }
@@ -59,6 +59,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    func windowScene(_ windowScene: UIWindowScene, didUpdate previousCoordinateSpace: UICoordinateSpace, interfaceOrientation previousInterfaceOrientation: UIInterfaceOrientation, traitCollection previousTraitCollection: UITraitCollection) {
+        window?.overrideUserInterfaceStyle = .dark
+    }
 
 }
 

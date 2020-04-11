@@ -11,7 +11,7 @@
 		3864511723D9B42600E75BAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3864511623D9B42600E75BAD /* AppDelegate.swift */; };
 		3864511923D9B42600E75BAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3864511823D9B42600E75BAD /* SceneDelegate.swift */; };
 		3864511B23D9B42600E75BAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3864511A23D9B42600E75BAD /* ContentView.swift */; };
-		3864511D23D9B42800E75BAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3864511C23D9B42800E75BAD /* Assets.xcassets */; };
+		3864511D23D9B42800E75BAD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3864511C23D9B42800E75BAD /* Images.xcassets */; };
 		3864512023D9B42800E75BAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3864511F23D9B42800E75BAD /* Preview Assets.xcassets */; };
 		3864512323D9B42800E75BAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3864512123D9B42800E75BAD /* LaunchScreen.storyboard */; };
 		3864512D23D9B4DF00E75BAD /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3864512B23D9B4DF00E75BAD /* TableViewController.swift */; };
@@ -26,10 +26,14 @@
 		387617B623E51D56001B70A8 /* RealmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387617B423E51D56001B70A8 /* RealmViewController.xib */; };
 		387617B823E52780001B70A8 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387617B723E52780001B70A8 /* RealmModel.swift */; };
 		387617BA23E53838001B70A8 /* RealmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387617B923E53838001B70A8 /* RealmViewModel.swift */; };
+		38A0B9A52435B89E00087011 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A0B9A42435B89E00087011 /* Colors.xcassets */; };
 		38E5705023E580CC00122636 /* ApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E5704E23E580CC00122636 /* ApiViewController.swift */; };
 		38E5705123E580CC00122636 /* ApiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E5704F23E580CC00122636 /* ApiViewController.xib */; };
 		38E5705323E580E100122636 /* ApiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E5705223E580E100122636 /* ApiViewModel.swift */; };
 		38E5705523E582BA00122636 /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E5705423E582BA00122636 /* ApiModel.swift */; };
+		38F125042441855300C2755F /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F125032441855300C2755F /* Assets.swift */; };
+		38F481BA23FAD94B006D8CED /* ScrollStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F481B823FAD94A006D8CED /* ScrollStackViewController.swift */; };
+		38F481BB23FAD94B006D8CED /* ScrollStackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F481B923FAD94A006D8CED /* ScrollStackViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +42,7 @@
 		3864511623D9B42600E75BAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3864511823D9B42600E75BAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3864511A23D9B42600E75BAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3864511C23D9B42800E75BAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3864511C23D9B42800E75BAD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3864511F23D9B42800E75BAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3864512223D9B42800E75BAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3864512423D9B42800E75BAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,10 +58,14 @@
 		387617B423E51D56001B70A8 /* RealmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RealmViewController.xib; sourceTree = "<group>"; };
 		387617B723E52780001B70A8 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		387617B923E53838001B70A8 /* RealmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmViewModel.swift; sourceTree = "<group>"; };
+		38A0B9A42435B89E00087011 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		38E5704E23E580CC00122636 /* ApiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiViewController.swift; sourceTree = "<group>"; };
 		38E5704F23E580CC00122636 /* ApiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApiViewController.xib; sourceTree = "<group>"; };
 		38E5705223E580E100122636 /* ApiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiViewModel.swift; sourceTree = "<group>"; };
 		38E5705423E582BA00122636 /* ApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
+		38F125032441855300C2755F /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		38F481B823FAD94A006D8CED /* ScrollStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollStackViewController.swift; sourceTree = "<group>"; };
+		38F481B923FAD94A006D8CED /* ScrollStackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollStackViewController.xib; sourceTree = "<group>"; };
 		39B73437C78F1B06A136173E /* Pods-Swift_Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Practice.release.xcconfig"; path = "Target Support Files/Pods-Swift_Practice/Pods-Swift_Practice.release.xcconfig"; sourceTree = "<group>"; };
 		7298E96A511DB18B524C570F /* Pods_Swift_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -98,10 +106,12 @@
 				3864513323D9F64A00E75BAD /* Models */,
 				3864513623DD649600E75BAD /* ViewModels */,
 				3864512A23D9B4BA00E75BAD /* Views */,
+				38A0B9A62435BCC300087011 /* SwiftGen */,
 				3864511623D9B42600E75BAD /* AppDelegate.swift */,
 				3864511823D9B42600E75BAD /* SceneDelegate.swift */,
 				3864511A23D9B42600E75BAD /* ContentView.swift */,
-				3864511C23D9B42800E75BAD /* Assets.xcassets */,
+				3864511C23D9B42800E75BAD /* Images.xcassets */,
+				38A0B9A42435B89E00087011 /* Colors.xcassets */,
 				3864512123D9B42800E75BAD /* LaunchScreen.storyboard */,
 				3864512423D9B42800E75BAD /* Info.plist */,
 				3864511E23D9B42800E75BAD /* Preview Content */,
@@ -130,6 +140,8 @@
 				387617B423E51D56001B70A8 /* RealmViewController.xib */,
 				38E5704E23E580CC00122636 /* ApiViewController.swift */,
 				38E5704F23E580CC00122636 /* ApiViewController.xib */,
+				38F481B823FAD94A006D8CED /* ScrollStackViewController.swift */,
+				38F481B923FAD94A006D8CED /* ScrollStackViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,6 +164,14 @@
 				38E5705223E580E100122636 /* ApiViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		38A0B9A62435BCC300087011 /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				38F125032441855300C2755F /* Assets.swift */,
+			);
+			path = SwiftGen;
 			sourceTree = "<group>";
 		};
 		7103E94CE3E8F2269724E5F4 /* Pods */ = {
@@ -183,6 +203,7 @@
 				3864511023D9B42600E75BAD /* Frameworks */,
 				3864511123D9B42600E75BAD /* Resources */,
 				42904D0612BAA9BE7C96DB37 /* [CP] Embed Pods Frameworks */,
+				38A0B9A72435C0F800087011 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -234,17 +255,36 @@
 				3864512323D9B42800E75BAD /* LaunchScreen.storyboard in Resources */,
 				387617B223E4738D001B70A8 /* DetailViewController.xib in Resources */,
 				3864512023D9B42800E75BAD /* Preview Assets.xcassets in Resources */,
-				3864511D23D9B42800E75BAD /* Assets.xcassets in Resources */,
+				3864511D23D9B42800E75BAD /* Images.xcassets in Resources */,
 				3864512E23D9B4DF00E75BAD /* TableViewController.xib in Resources */,
 				387617B623E51D56001B70A8 /* RealmViewController.xib in Resources */,
 				3864513223D9C07100E75BAD /* ExampleViewController.xib in Resources */,
+				38A0B9A52435B89E00087011 /* Colors.xcassets in Resources */,
 				38E5705123E580CC00122636 /* ApiViewController.xib in Resources */,
+				38F481BB23FAD94B006D8CED /* ScrollStackViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		38A0B9A72435C0F800087011 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftGen/bin/swiftgen\n";
+		};
 		38C68F8B02B1CD528BD76255 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,10 +341,12 @@
 				38E5705023E580CC00122636 /* ApiViewController.swift in Sources */,
 				38E5705523E582BA00122636 /* ApiModel.swift in Sources */,
 				3864512D23D9B4DF00E75BAD /* TableViewController.swift in Sources */,
+				38F125042441855300C2755F /* Assets.swift in Sources */,
 				387617B523E51D56001B70A8 /* RealmViewController.swift in Sources */,
 				38E5705323E580E100122636 /* ApiViewModel.swift in Sources */,
 				3864513123D9C07100E75BAD /* ExampleViewController.swift in Sources */,
 				387617B123E4738D001B70A8 /* DetailViewController.swift in Sources */,
+				38F481BA23FAD94B006D8CED /* ScrollStackViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

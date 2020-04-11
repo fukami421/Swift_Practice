@@ -24,6 +24,7 @@ class TableViewController: UIViewController {
     private lazy var configureCell: RxTableViewSectionedAnimatedDataSource<SectionOfCustomData>.ConfigureCell = { [weak self] (dataSource, tableView, indexPath, item) in
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "")
         cell.textLabel?.text = item.aString
+        cell.textLabel?.textColor = Asset.Colors.Folder0.testWhite.color
         return cell
     }
 
@@ -102,4 +103,3 @@ class TableViewController: UIViewController {
             .disposed(by: self.disposeBag)
     }
 }
-

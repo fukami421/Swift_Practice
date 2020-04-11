@@ -1,0 +1,9 @@
+input_dir: Swift_Practice
+output_dir: Swift_Practice/SwiftGen
+xcassets:
+  - inputs:
+    - Images.xcassets
+    - Colors.xcassets
+    outputs:
+      - templateName: swift4
+        output: Assets.swift
